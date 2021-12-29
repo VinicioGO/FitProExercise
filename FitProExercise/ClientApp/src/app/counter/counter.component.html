@@ -1,0 +1,22 @@
+<h2>New customer</h2>
+
+<p>Add a new customer.</p>
+
+<div class="mb-3">
+    <label for="x1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="x1" [(ngModel)]="newCustomer.name">
+</div>
+<div class="mb-3">
+    <label for="x2" class="form-label">Phone</label>
+    <input type="text" class="form-control" id="x2" [(ngModel)]="newCustomer.phone">
+</div>
+<div class="mb-3">
+    <label for="x3" class="form-label">Email</label>
+    <input type="email" class="form-control" id="x3" [(ngModel)]="newCustomer.email">
+</div>
+<div class="mb-3">
+    <label for="x4" class="form-label">Notes</label>
+    <textarea class="form-control" id="x4" rows="2" [(ngModel)]="newCustomer.notes"></textarea>
+</div>
+
+<button class="btn btn-primary" (click)="addCustomer()">Add new</button>

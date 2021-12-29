@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Customers</h1>
+
+<p>This component displays a list of customers.</p>
+
+<p *ngIf="!customers"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="customers">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Notes</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.phone }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.notes }}</td>
+        <td><button class="btn btn-sm btn-danger" (click)="deleteCustomer(customer)"><strong> X </strong></button></td>
+    </tr>
+  </tbody>
+</table>
