@@ -41,8 +41,8 @@ export class FetchDataComponent {
             catchError(this.handleError<Customer>('Ftp/deleteCustomer'))
         ).toPromise();
 
-        this.listCustomers();
         alert('Successful removal');
+        this.listCustomers();
     }
 
 }
